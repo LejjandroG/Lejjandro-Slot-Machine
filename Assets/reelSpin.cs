@@ -10,7 +10,10 @@ public class reelSpin : MonoBehaviour
     void Start()
     {
         main = this;
-        spinMaxCounter = Random.Range(0, 20);
+        
+        // Set a random maximum spin count between 5 and 30
+        // Ställ in ett slumpmässigt maximalt antal snurr mellan 5 och 30
+        spinMaxCounter = Random.Range(5, 30);
     }
 
     // Update is called once per frame

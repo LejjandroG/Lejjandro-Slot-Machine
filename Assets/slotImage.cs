@@ -15,14 +15,20 @@ public class slotImage : MonoBehaviour
     {
         if (reelSpin.main.isSpinning)
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime); // Move the image downwards at the specified speed
+            // Move the image downwards at the specified speed
+            // Flytta bilden nedåt med den angivna hastigheten
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
         }
 
 
-        if (transform.position.y <= -1.6f)
+        if (transform.position.y <= -1.3f)
         {
-            transform.position = new Vector3(transform.position.x,1.6f,0); // Reset the position of the image to the top when it reaches a certain point
-            reelSpin.main.spinCounter++; // Increment the spin counter in the reelSpin script
+            // Reset the position of the image to the top when it reaches a certain point
+            // Återställ positionen för bilden till toppen när den når en viss punkt
+            transform.position = new Vector3(transform.position.x,1.464f,0);
+            // Increment the spin counter in the reelSpin script
+            // Öka snurr räknaren i reelSpin skriptet
+            reelSpin.main.spinCounter++;
         }
     }
 }
