@@ -3,7 +3,7 @@ using UnityEngine;
 public class slotImage : MonoBehaviour
 {
 
-    public int speed = 5; // Speed at which the image moves downwards
+    private int speed; // Speed at which the image moves downwards
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,6 +13,7 @@ public class slotImage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        speed = transform.parent.GetComponent<ReelManager>().speed; // Get the speed from the ReelManager script
         if (reelSpin.main.isSpinning)
         {
             // Move the image downwards at the specified speed
